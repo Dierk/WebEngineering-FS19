@@ -24,7 +24,7 @@ You can always go back to the youngest state with `git checkout master`.
 
 ### Setup git to sync with latest upstream
 
-`git remote add upstream https://github.com/Dierk/WebEngineering-HS18.git`
+`git remote add upstream https://github.com/Dierk/WebEngineering-FS19.git`
 
 validate via
 

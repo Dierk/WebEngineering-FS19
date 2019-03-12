@@ -38,9 +38,7 @@ Browse to http://localhost:8080/static/Home.html .
 
 ## Assignment 2
 
-Have a look at mvc/src/integration-test/groovy/mvc/HomeSecondSpec.groovy .
-
-Write a test, that goes to http://www.fhnw.ch
+Write a test, that goes to http://www.fhnw.ch/de
 and clicks on a link with text "Studierende".
 Validate the page title.
 
