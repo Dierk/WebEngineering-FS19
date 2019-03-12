@@ -1,9 +1,15 @@
+<%@ page import="mvc.CalculatorModel" %>
 <html>
 <head>
     <meta name="layout" content="form"/>
     <title>
         In-Place Calculator
     </title>
+    <style>
+        .${CalculatorModel.ERROR_CLASS_NAME} {
+            border-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -11,9 +17,14 @@
 <form action="/inPlaceCalculator/calc" method="get">
     <fieldset class="form padded">
 
-        <tmpl:form_row name="en" label="En" model="${calculatorInstance}"/>
+        <input type="number" name="en"
+               value="${calculatorInstance.en}"
+               class="${calculatorInstance.en_error}"
+               title="${calculatorInstance.en_error_message}"
+        >
 
-        <tmpl:form_row name="exam" label="Exam" model="${calculatorInstance}"/>
+
+
 
         <div>
             <label>&nbsp;</label>
@@ -25,9 +36,7 @@
 
 <div class="padded">
     <label>Result</label>
-    <mvc:decorate grade="${calculatorInstance.result}">
         <output>${calculatorInstance.result}</output>
-    </mvc:decorate>
 </div>
 
 </body>
