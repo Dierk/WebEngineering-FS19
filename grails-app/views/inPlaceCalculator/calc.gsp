@@ -5,6 +5,11 @@
     <title>
         In-Place Calculator
     </title>
+    <style>
+        .error {
+            border-color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,6 +17,10 @@
 <form action="/inPlaceCalculator/calc" method="get">
     <fieldset class="form padded">
 
+        <input name="en" value="${calculatorInstance.en}"
+        class="${calculatorInstance.en_error}"
+        title="${calculatorInstance.en_error_message}"
+        >
 
         <div>
             <label>&nbsp;</label>
