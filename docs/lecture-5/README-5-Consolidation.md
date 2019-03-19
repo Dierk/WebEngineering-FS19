@@ -21,7 +21,6 @@ https://www.youtube.com/watch?v=qhbuKbxJsk8
   - MultiplicationCircleController
   - multiplicationCircle/show.gsp
   - integration-test MultiplicationCircleSpec
-  - test MultiplicationCircleControllerSpec
 
 ## practical work
 
