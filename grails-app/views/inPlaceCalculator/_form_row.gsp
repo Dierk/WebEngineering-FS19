@@ -15,7 +15,7 @@
          required="true" min="1.0" max="6.0" id="${name}"
          class="${hasError(model, name) ? 'error' : ''}"
          title="${g.message(error: findError(model, name)) }"
-         onchange="validate(this)"
+
 />
 
 </div>

@@ -17,14 +17,10 @@
 <form action="/inPlaceCalculator/calc" method="get">
     <fieldset class="form padded">
 
-        <input id="en" name="en" type="number" value="${calculatorInstance.en}"
-        class="${calculatorInstance.en_error}"
-        title="${calculatorInstance.en_error_message}"
-        >
-        <input id="exam" name="exam" value="${calculatorInstance.exam}"
-        class="${calculatorInstance.exam_error}"
-        title="${calculatorInstance.exam_error_message}"
-        >
+    <tmpl:form_row name="en"   label="EN"   model="${calculatorInstance}"/>
+
+    <tmpl:form_row name="exam" label="Exam" model="${calculatorInstance}"/>
+
 
         <div>
             <label>&nbsp;</label>
@@ -36,7 +32,10 @@
 
 <div class="padded">
     <label>Result</label>
+      <mvc:decorate grade="${calculatorInstance.result}">
         <output>${calculatorInstance.result}</output>
+      </mvc:decorate>
+
 </div>
 
 </body>
