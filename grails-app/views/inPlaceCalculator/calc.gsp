@@ -17,9 +17,13 @@
 <form action="/inPlaceCalculator/calc" method="get">
     <fieldset class="form padded">
 
-        <input name="en" value="${calculatorInstance.en}"
+        <input id="en" name="en" value="${calculatorInstance.en}"
         class="${calculatorInstance.en_error}"
         title="${calculatorInstance.en_error_message}"
+        >
+        <input id="exam" name="exam" value="${calculatorInstance.exam}"
+        class="${calculatorInstance.exam_error}"
+        title="${calculatorInstance.exam_error_message}"
         >
 
         <div>
