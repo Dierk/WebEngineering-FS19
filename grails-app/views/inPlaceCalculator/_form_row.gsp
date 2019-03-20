@@ -2,20 +2,13 @@
  Emitting a single row of a form with label and input field.
  Params:
    name  : name to use for id, name, labelFor
-   label : what the user sees beneath the input field
-   model : the values to show and error information
- Depends on the "validate" function from outside.
+   model : the calculatorInstance to display
 --%>
 
-<%@ page import="static mvc.FieldUtil.*" %>
-
 <div>
-  <label for='${name}'>${label}</label>
-  <input type="number decimal" name="${name}" value="${model.getProperty(name)}"
-         required="true" min="1.0" max="6.0" id="${name}"
-         class="${hasError(model, name) ? 'error' : ''}"
-         title="${g.message(error: findError(model, name)) }"
-
-/>
-
+  <label for="${name}">${name} : </label>
+<input id="${name}" name="${name}" value="${model[name]}"
+class="${model[name +'_error']}"
+title="${model[name+'_error_message']}"
+>
 </div>
