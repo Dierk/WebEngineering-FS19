@@ -28,7 +28,9 @@
 </head>
 <body>
     <form action="/multiplicationCircle/index">
-      <tmpl:up_down_input name="segmentCount" label="Segments" value="${circleInstance.segmentCount}" />
+
+      <tmpl:up_down_input name="segmentCount" label="Segments"   value="${circleInstance.segmentCount}" />
+      <tmpl:up_down_input name="tableBase"    label="Table Base" value="${circleInstance.tableBase}" />
 
       <!-- TODO: add an input for the table base -->
 
