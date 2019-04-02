@@ -20,7 +20,7 @@ class BootStrap {
         save(new Booking(room: r1, booker: dk, timeSlot: "PM1", bookingDate: today + 1))
     }
 
-    static <D> D save(D domainObject) {
+    static <Domain> Domain save(Domain domainObject) {
         domainObject.save(failOnError: true, flush:true)
     }
 
