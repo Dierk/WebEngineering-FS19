@@ -8,6 +8,12 @@ class BootStrap {
 
         if (Environment.current == Environment.PRODUCTION) return; // guard clause
 
+        SecUser me = new SecUser(username: "me", password: "1234").save(flush:true);
+
+        SecRole admin = new SecRole(authority: SecRole.ROLE_ADMIN).save(flush:true);
+
+        new SecUserSecRole(secUser: me, secRole: admin).save(flush: true);
+
         Person dk = save(new Person(firstName: "Dierk",  lastName: "König"))
         Person dh = save(new Person(firstName: "Dieter", lastName: "Holz"))
 
