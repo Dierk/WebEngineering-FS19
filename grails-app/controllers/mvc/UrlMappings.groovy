@@ -8,7 +8,7 @@ class UrlMappings {
                 // apply constraints here
             }
         }
-
+        "/bookings"(resources:"booking" )
         "/"(view:"/index")
         "500"(view:'/error')
         "404"(view:'/notFound')
