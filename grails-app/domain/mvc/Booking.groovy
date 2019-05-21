@@ -2,7 +2,7 @@ package mvc
 
 import grails.rest.Resource
 
-@Resource(uri="bookings")
+@Resource(uri="/bookings")
 class Booking {
 
     Room   room

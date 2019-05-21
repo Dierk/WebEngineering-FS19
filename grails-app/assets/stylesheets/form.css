@@ -1,0 +1,36 @@
+
+label {  /* labels should go left of the input fields with fixed width such that the inputs align vertically */
+  display: block;
+  float:   left;
+  clear:   left;
+  width:   7em;
+}
+input {
+  display: block;
+  float:   left;
+  clear:   right;
+}
+
+@keyframes shake {
+    0% {transform: rotate(0deg)}
+   33% {transform: rotate(3deg)}
+   66% {transform: rotate(-3deg)}
+  100% {transform: rotate(0deg)}
+}
+.error { /* only change properties that do not change position or size. Keep the UI stable. */
+  border-color: orange;
+  /*animation: shake 0.2s 2;*/
+}
+.padded { /* for vertical alignment of fieldset and result */
+  padding: 1em;
+  margin:  0px;
+}
+footer {
+  display: block;
+  width:   100%;
+  background-color: lightgray;
+  position: fixed;
+  bottom:   0px;
+  left:     0px;
+  text-align: center;
+}

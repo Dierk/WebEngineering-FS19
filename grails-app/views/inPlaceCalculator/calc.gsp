@@ -10,6 +10,7 @@
             border-color: red;
         }
     </style>
+%{--    <asset:stylesheet src="form.css"/>--}%
 </head>
 
 <body>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>
+        Temperature Converter with JavaScript
+    </title>
+    <script>
+        function celsiusToFahrenheit(celsius)    { return celsius * 1.8 + 32 }
+        function fahrenheitToCelsius(fahrenheit) { return (fahrenheit-32) / 1.8 }
+    </script>
+</head>
+<body>
+<h1>
+    Temperature Converter with JavaScript
+</h1>
+
+<form>
+    <fieldset class="form padded">
+
+        <div>
+            <label for='celsius'>Celsius</label>
+            <input type="number decimal" name="celsius" value="0.0"
+                   required="true" min="1.0" max="6.0" id="celsius"
+                   onchange="document.getElementById('fahrenheit').value = celsiusToFahrenheit(value);"
+            />
+        </div>
+
+        <div>
+            <label for='fahrenheit'>Fahrenheit</label>
+            <input type="number decimal" name="fahrenheit" value="0.0"
+                   required="true" min="1.0" max="6.0" id="fahrenheit"
+            />
+            <!--TODO: make value changes of fahrenheit update the celsius field-->
+        </div>
+
+    </fieldset>
+</form>
+
+</body>
+</html>
