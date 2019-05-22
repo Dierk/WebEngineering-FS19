@@ -19,7 +19,7 @@ input {
 }
 .error { /* only change properties that do not change position or size. Keep the UI stable. */
   border-color: orange;
-  /*animation: shake 0.2s 2;*/
+  animation: shake 0.2s 2;
 }
 .padded { /* for vertical alignment of fieldset and result */
   padding: 1em;

@@ -5,12 +5,7 @@
     <title>
         In-Place Calculator
     </title>
-    <style>
-        .error {
-            border-color: red;
-        }
-    </style>
-%{--    <asset:stylesheet src="form.css"/>--}%
+    <asset:stylesheet src="form.css"/>
 </head>
 
 <body>
