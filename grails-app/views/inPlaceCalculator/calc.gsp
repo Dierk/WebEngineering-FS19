@@ -36,6 +36,19 @@
 
 </div>
 
+<script>
+    const en = document.getElementById("en");
+    en.onchange = function (evt) {
+        if( Number(en.value) < 1.0) {
+            alert("en value needs to be at least 1.0")
+        }
+        en.className = "error";
+        en.focus();
+    }
+
+
+</script>
+
 </body>
 </html>
 
