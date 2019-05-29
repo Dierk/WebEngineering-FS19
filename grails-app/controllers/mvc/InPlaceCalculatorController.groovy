@@ -5,6 +5,9 @@ import grails.validation.Validateable
 class InPlaceCalculatorController {
 
     def calc(CalculatorModel calcModel) {
+
+        boolean isIphone = request.getHeader('user-agent')?.contains("iPhone");
+
         calcModel.en     = Math.round(calcModel.en   * 10) / 10
         calcModel.exam   = Math.round(calcModel.exam * 10) / 10
         calcModel.result = Math.round((calcModel.en + calcModel.exam) / 2)
@@ -19,7 +22,12 @@ class InPlaceCalculatorController {
         if (calcModel.hasErrors()) {
             calcModel.result = "Cannot calculate. Input data was invalid."
         }
-        render view: 'calc', model: [calculatorInstance: calcModel]
+        if (isIphone) {
+            render view: 'icalc', model: [calculatorInstance: calcModel]
+        } else {
+            render view: 'calc', model: [calculatorInstance: calcModel]
+        }
+
     }
 
 }
